@@ -47,8 +47,8 @@ else
 fi
 
 install_essentials() {
-	apt update
-	apt install snapd
+	apt -qq update
+	apt install snapd python3-pip -y
 }
 
 install_snap_packages() {
