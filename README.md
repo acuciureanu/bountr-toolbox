@@ -1,4 +1,4 @@
-# bountr-toolbox
+# Bountr Toolbox
 This is a script which helps me getting ready my Ubuntu box for bug bounty hunting
 
 ### Prerequisites
