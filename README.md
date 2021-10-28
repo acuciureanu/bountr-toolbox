@@ -7,7 +7,7 @@ Feel free to add other useful stuff. 😀
 
 [golang](https://golang.org/doc/install)
 
-After installing Go I add thhe following lines to:
+After installing Go I add the following lines to:
 
 `~/.bash_profile`
 ```sh
@@ -28,7 +28,7 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 $ bash bountr-toolbox.sh
 ```
 
-# Greetings
+### Greetings
 
 [dwisiswant0](https://github.com/dwisiswant0/)
 
