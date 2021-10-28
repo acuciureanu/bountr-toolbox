@@ -1,5 +1,7 @@
 #!/bin/bash
 
+__seclists_folder="$HOME/seclists/"
+
 __snap_packages=(
 	amass
 	dalfox
@@ -33,13 +35,23 @@ __header="
  | |__   ___  _   _ _ __ | |_ _ __
  | '_ \ / _ \| | | | '_ \| __| '__|
  | |_) | (_) | |_| | | | | |_| |
- |_.__/ \___/ \__,_|_| |_|\__|_|
+ |_.__/ \___/ \__,_|_| |_|\__|_| by swappie
+ 
+ Greetings:
+ 
+ dwisiswant0, Emoe, ffuf, hahwul, hakluke, hiddengearz, j3ssie, 
+ Jaeles Project, lc, OWASP, Project Discovery, tomnomnom
 "
 
 echo "$__header"
 
 install_essentials() {
 	sudo -- bash -c 'apt -qq update; apt install snapd python3-pip -y'
+}
+
+install_seclists() {
+	echo "Installing Seclists to $__seclists_folder"
+	git clone https://github.com/danielmiessler/SecLists.git $__seclists_folder &> /dev/null
 }
 
 install_snap_packages() {
@@ -56,9 +68,10 @@ install_go_modules() {
 	done
 }
 
-
 install_essentials
+install_seclists
 install_snap_packages
 install_go_modules
 
 echo "Done!"
+echo "Seclists location is $__seclists_folder"
