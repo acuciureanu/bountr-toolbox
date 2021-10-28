@@ -38,17 +38,8 @@ __header="
 
 echo "$__header"
 
-# Check for suficient privileges before going ahead
-if [[ $EUID -ne 0 ]]; then
-	echo "Insuficient privileges. Please run with sudo" 2>&1
-	exit 1
-else
-	echo "You have enough privileges. Moving on."
-fi
-
 install_essentials() {
-	apt -qq update
-	apt install snapd python3-pip -y
+	sudo -- bash -c 'apt -qq update; apt install snapd python3-pip -y'
 }
 
 install_snap_packages() {
