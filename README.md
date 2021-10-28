@@ -1,13 +1,30 @@
-# Bountr Toolbox
+# Bountr
 This is a simple script which helps me getting ready my Ubuntu box for bug bounty hunting.
+
+Feel free to add other useful stuff. 😀
 
 ### Prerequisites
 [golang](https://golang.org/doc/install)
 
-### Run
+After installing Go I add thhe following lines to:
+
+`~/.bash_profile`
+```sh
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+```
+
+`~/.bashrc`
+```sh
+ if [ -f ~/.bash_profile ]; then
+    source ~/.bash_profile
+ fi
+```
+
+### Run the script
 
 ```sh
-$ sudo bash bountr-toolbox.sh
+$ bash bountr-toolbox.sh
 ```
 
 # Greetings
