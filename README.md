@@ -1,9 +1,10 @@
-# Bountr
+# Bountr toolbox
 This is a simple script which helps me getting ready my Ubuntu box for bug bounty hunting.
 
 Feel free to add other useful stuff. 😀
 
 ### Prerequisites
+
 [golang](https://golang.org/doc/install)
 
 After installing Go I add thhe following lines to:
