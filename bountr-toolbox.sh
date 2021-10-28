@@ -74,4 +74,5 @@ install_snap_packages
 install_go_modules
 
 echo "Done!"
+
 echo "Seclists location is $__seclists_folder"
